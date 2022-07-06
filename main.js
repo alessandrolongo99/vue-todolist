@@ -23,7 +23,7 @@ const app = new Vue({
             this.todos.splice(index, 1);
         },
         createItem: function(inputText){
-            this.todos.push(this.inputText, false);
+            this.todos.push({text: this.inputText, done: false});
         }
     }
 })
