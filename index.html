@@ -29,7 +29,7 @@
             <div class="row justify-content-center">
                 <div class="col-8 bg-light rounded mt-4 py-2">
                     <button class="btn btn-primary" @click="createItem(inputText)">Aggiungi</button>
-                    <input type="text" v-model.trim="inputText">
+                    <input type="text" @keyup.enter="createItem(inputText)" v-model.trim="inputText">
                 </div>
             </div>
         </div>
