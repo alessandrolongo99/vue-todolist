@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#root',
     data: {
         index: 0,
+        inputText: '',
         todos: [
             {
                 text: 'Fare i compiti',
@@ -21,8 +22,8 @@ const app = new Vue({
         removeItem: function (index) {
             this.todos.splice(index, 1);
         },
-        crateItem: function(item){
-            this.todos.push(item, false);
+        createItem: function(inputText){
+            this.todos.push(this.inputText, false);
         }
     }
 })
