@@ -22,8 +22,11 @@ const app = new Vue({
         removeItem: function (index) {
             this.todos.splice(index, 1);
         },
-        createItem: function(inputText){
-            this.todos.push({text: this.inputText, done: false});
+        createItem: function (inputText) {
+            this.todos.push({ text: inputText, done: false });
+        },
+        changeDone: function (todo) {
+            todo.done = !todo.done;
         }
     }
 })

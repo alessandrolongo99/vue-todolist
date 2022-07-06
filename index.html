@@ -19,7 +19,7 @@
                 <div class="col-8 bg-light rounded p-0">
                     <ul class="list-group">
                         <li v-for="(todo, index) in todos" class="list-group-item"
-                            :class="{'text-decoration-line-through': todo.done}">
+                            :class="{'text-decoration-line-through': todo.done}" @click="changeDone(todo)">
                             <button class="btn btn-primary me-3" @click="removeItem(index)">X</button>{{todo.text}}
                         </li>
                     </ul>
