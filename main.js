@@ -24,6 +24,7 @@ const app = new Vue({
         },
         createItem: function (inputText) {
             this.todos.push({ text: inputText, done: false });
+            this.inputText = '';
         },
         changeDone: function (todo) {
             todo.done = !todo.done;
