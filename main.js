@@ -23,8 +23,12 @@ const app = new Vue({
             this.todos.splice(index, 1);
         },
         createItem: function (inputText) {
-            this.todos.push({ text: inputText, done: false });
-            this.inputText = '';
+            if (inputText == '') {
+                console.warn('elemento vuoto');
+            } else {
+                this.todos.push({ text: inputText, done: false });
+                this.inputText = '';
+            }
         },
         changeDone: function (todo) {
             todo.done = !todo.done;
